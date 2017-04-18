@@ -82,5 +82,5 @@ data_wide <- bind_cols(subject_merge, y_merge, X_merge) %>% arrange(
 tidydata <- group_by(data_wide, subject_ID, Activity_label) %>% summarise_each(funs(mean))
 
 ##' Save the tidy data file to a txt file in the directory. 
-write.table(tidydata, file = "./Ass4/tidydata.txt")
+write.table(tidydata, file = "./Ass4/tidydata.txt", row.names = FALSE)
 
